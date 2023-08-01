@@ -1,0 +1,94 @@
+body {
+    font-family: 'Quicksand', Arial, sans-serif; /* Fuente Quicksand */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    background: linear-gradient(-45deg, #8E44AD, #3498DB, #FFC300, #E74C3C);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  .calculator-container, .converter-container {
+    max-width: 400px;
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  h1 {
+    text-align: center;
+    font-size: 36px; /* Tamaño de fuente más grande para el título */
+    margin-top: 6px; /* Margen superior añadido */
+    padding-right: 102px;
+  }
+  span{
+    text-align: center;
+    font-size: 26px; 
+    margin-top: 6px;
+  }
+  .calculator-input, .converter-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  .calculator-result, .converter-result {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .converter-result {
+    margin-top: 15px;
+  }
+  /* Estilos para los botones futuristas */
+  button {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #8E44AD; /* Color morado */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #FFC300; /* Color amarillo con hover */
+  }
+  /* Estilos para el menú desplegable */
+  .converter-menu {
+    position: relative;
+    display: inline-block;
+  }
+  .converter-menu-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 4px;
+  }
+  .converter-menu:hover .converter-menu-content {
+    display: block;
+  }
+  .converter-menu-item {
+    padding: 10px;
+    cursor: pointer;
+  }
+  .converter-menu-item:hover {
+    background-color: #ddd;
+  }
